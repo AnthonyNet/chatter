@@ -12,17 +12,17 @@ function App() {
 
   const roomInputRef = useRef(null);
 
-  if (isAuth) {
+  if (!isAuth) {
     return (
       <div className="App">
-        <Auth />
+        <Auth  setIsAuth={setIsAuth}/>
       </div>
     );
   }
   return (
     <div>
       {room ? (
-        <Chat />
+        <Chat  room={room}/>
       ) : (
         <div className="room">
           {" "}
