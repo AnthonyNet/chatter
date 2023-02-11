@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.chat-app{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color:red;
+}
+
+
