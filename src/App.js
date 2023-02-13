@@ -11,7 +11,7 @@ function App() {
   const [room, setRoom] = useState(null);
 
   const roomInputRef = useRef(null);
-
+/*
   if (!isAuth) {
     return (
       <div className="App">
@@ -20,7 +20,7 @@ function App() {
         </section>
       </div>
     );
-  }
+  }*/
   return (
     <section className="mainSection flex justify-around items-center">
     <div  className="flex justify-between items-center w-[800px] h-[430px] border-b-4 powerShell text-2xl">
