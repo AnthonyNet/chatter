@@ -24,12 +24,12 @@ function App() {
       {room ? (
         <Chat  room={room}/>
       ) : (
-        <div className="room">
+        <div className="room w-scren h-screen flex justify-center items-center">
           {" "}
-          <label>Enter Room Name</label>
-          <input ref={roomInputRef} />
+          <label>Napiš jméno místnosti</label>
+          <input className="border-4" ref={roomInputRef} />
           <button onClick={() => setRoom(roomInputRef.current.value)}>
-            Enter Chat
+            --Vstup--
           </button>
         </div>
       )}{" "}

@@ -49,7 +49,7 @@ export const Chat = ({ room }) => {
   };
 
   return (
-    <div className="chat-app">
+    <section className="chat-app  bg-slate-500">
       <div className="header">
         <h1>Welcome to: {room.toUpperCase()}</h1>
       </div>
@@ -72,7 +72,7 @@ export const Chat = ({ room }) => {
           Send
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 
