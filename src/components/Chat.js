@@ -49,9 +49,10 @@ export const Chat = ({ room }) => {
   };
 
   return (
-    <section className="chat-app  bg-slate-500">
-      <div className="header">
-        <h1>Welcome to: {room.toUpperCase()}</h1>
+    <section className="chat-app w-screen h-screen bg-black flex items-center justify-center p-8">
+  <div className="h-full flex flex-col justify-between ">
+  <div className="header">
+        <h2 className="text-3xl">Welcome to: {room.toUpperCase()}</h2>
       </div>
       <div className="messages">
         {messages.map((message) => (
@@ -72,6 +73,7 @@ export const Chat = ({ room }) => {
           Send
         </button>
       </form>
+  </div>
     </section>
   );
 };
