@@ -51,14 +51,14 @@ export const Chat = ({ room }) => {
   };
 
   return (
-    <section className="chat-app w-[100vw] h-screen flex items-center justify-center p-8 border-4 mainSection">
-  <div className="h-full w-full flex flex-col justify-between items-center border-4 ">
+    <section className="chat-app w-[100vw] h-screen flex items-center justify-center p-8 sm:border-4 mainSection">
+  <div className="h-full w-full flex flex-col justify-between items-center sm:border-4 ">
   <div className="header">
         <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
       </div>
-      <div className="messages">
+      <div className="messages overflow-auto">
         {messages.map((message) => (
-          <div key={message.id} className="message border-4">
+          <div key={message.id} className="message border-2 sm:border-4">
             <span className="user">{message.user}:</span> {message.text}
           </div>
         ))}
@@ -76,7 +76,7 @@ export const Chat = ({ room }) => {
         </button>
       </form>
   </div>
-    </section>
+    </section> 
   );
 };
 
