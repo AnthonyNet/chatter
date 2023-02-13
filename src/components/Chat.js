@@ -15,8 +15,10 @@ export const Chat = ({ room }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const messagesRef = collection(db, "messages");
+  const [userX, setUserX] = useState(null);
 
   useEffect(() => {
+    setUserX(prompt('Zadej jméno:'))
     const queryMessages = query(
       messagesRef,
       where("room", "==", room),
@@ -41,7 +43,7 @@ export const Chat = ({ room }) => {
     await addDoc(messagesRef, {
       text: newMessage,
       createdAt: serverTimestamp(),
-      user: auth.currentUser.displayName,
+      user: userX,
       room,
     });
 
