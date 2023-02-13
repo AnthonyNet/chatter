@@ -49,14 +49,14 @@ export const Chat = ({ room }) => {
   };
 
   return (
-    <section className="chat-app w-screen h-screen flex items-center justify-center p-8">
-  <div className="h-full flex flex-col justify-between ">
+    <section className="chat-app w-[100vw] h-screen flex items-center justify-center p-8 border-4 mainSection">
+  <div className="h-full w-full flex flex-col justify-between items-center border-4 ">
   <div className="header">
-        <h2 className="text-3xl">Welcome to: {room.toUpperCase()}</h2>
+        <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
       </div>
       <div className="messages">
         {messages.map((message) => (
-          <div key={message.id} className="message">
+          <div key={message.id} className="message border-4">
             <span className="user">{message.user}:</span> {message.text}
           </div>
         ))}
@@ -67,9 +67,9 @@ export const Chat = ({ room }) => {
           value={newMessage}
           onChange={(event) => setNewMessage(event.target.value)}
           className="new-message-input"
-          placeholder="Type your message here..."
+          placeholder="Napiš zprávu..."
         />
-        <button type="submit" className="send-button">
+        <button type="submit" className="send-button anime border-2">
           Send
         </button>
       </form>
