@@ -15,14 +15,16 @@ function App() {
   if (!isAuth) {
     return (
       <div className="App">
-        <Auth  setIsAuth={setIsAuth}/>
+        <section className="mainSection">
+          <Auth setIsAuth={setIsAuth} />
+        </section>
       </div>
     );
   }
   return (
-    <div>
+    <section className="mainSection">
       {room ? (
-        <Chat  room={room}/>
+        <Chat room={room} />
       ) : (
         <div className="room w-scren h-screen flex justify-center items-center">
           {" "}
@@ -33,7 +35,7 @@ function App() {
           </button>
         </div>
       )}{" "}
-    </div>
+    </section>
   );
 }
 

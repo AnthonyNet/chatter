@@ -17,10 +17,12 @@ export const Auth = (props) => {
     }
   };
   return (
-    <section className="w-screen h-screen auth flex justify-center items-center bg-slate-50">
-      <div className="flex justify-around min-w-[400px] border-b-4">
-      <p className="text-red ">Přihlaš se Googlem:</p>
-      <button onClick={signInWithGoogle} className="bg-red-400 px-4">Přihlásit</button>
+    <section className="w-screen h-screen auth flex justify-center items-center">
+      <div className="flex justify-around items-center w-[800px] h-[430px] border-b-4 powerShell text-2xl">
+      <p>C:\  </p>
+      <p className="ml-4">λ <span className="anime">|</span></p>
+      <p className="text-red">Přihlaš se Googlem:</p>
+      <button onClick={signInWithGoogle} className=" px-4 mr-36 hover:opacity-0 ease-in-out duration-700 bg-red-700 animate-pulse">Přihlásit</button>
       </div>
     </section>
   );

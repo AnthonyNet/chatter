@@ -49,7 +49,7 @@ export const Chat = ({ room }) => {
   };
 
   return (
-    <section className="chat-app w-screen h-screen bg-black flex items-center justify-center p-8">
+    <section className="chat-app w-screen h-screen flex items-center justify-center p-8">
   <div className="h-full flex flex-col justify-between ">
   <div className="header">
         <h2 className="text-3xl">Welcome to: {room.toUpperCase()}</h2>

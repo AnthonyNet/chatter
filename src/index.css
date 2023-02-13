@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -22,6 +23,22 @@ code {
     monospace;
 }
 
+.mainSection{
+  background-image: url("https://images.hdqwalls.com/wallpapers/matrix-code-minimal-qz.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+}
+ 
+.powerShell {
+  background-image: url("components/console.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
 .chat-app{
   display: flex;
   flex-direction: column;
@@ -29,4 +46,17 @@ code {
   color:red;
 }
 
+.anime {
+  animation-name: consoleX;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes consoleX {
+  0% {
+    color: rgb(3, 255, 133);
+  }
+  100% {
+    color: rgba(40, 44, 42, 0);
+  }
+}
