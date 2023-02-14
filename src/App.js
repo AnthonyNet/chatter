@@ -23,11 +23,11 @@ function App() {
   }*/
   return (
     <section className="mainSection flex justify-around items-center">
-    <div  className="flex justify-between items-center w-[800px] h-[430px] border-b-4 powerShell text-2xl">
+    <div  className="flex justify-between items-center h-screen w-screen sm:w-[800px] sm:h-[430px]  powerShell text-2xl">
     {room ? (
         <Chat room={room} />
       ) : (
-        <div className="room w-scren h-screen flex justify-center items-center">
+        <div className="room w-screen h-screen sm:h-screen flex flex-col sm:flex-row justify-center  items-center gap-4">
           {" "}
           <label className="mx-4">Napiš jméno místnosti</label>
           <input className="border-4 mr-10" ref={roomInputRef} />
