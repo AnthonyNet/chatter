@@ -29,8 +29,8 @@ function App() {
       ) : (
         <div className="room w-screen h-screen sm:h-screen flex flex-col sm:flex-row justify-center  items-center gap-4">
           {" "}
-          <label className="mx-4">Napiš jméno místnosti</label>
-          <input className="border-4 mr-10" ref={roomInputRef} />
+          <label className="mx-4 text-xl sm:text-2xl">Napiš jméno místnosti</label>
+          <input className="border-4 sm:mr-10" ref={roomInputRef} />
           <button onClick={() => setRoom(roomInputRef.current.value)} className="px-4 hover:opacity-0 ease-in-out duration-700 bg-red-700 animate-pulse">
             --Vstup--
           </button>

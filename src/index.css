@@ -37,13 +37,14 @@ code {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
+
 }
 
 .chat-app{
   display: flex;
   flex-direction: column;
   height: 100vh;
-  color:red;
+  color:  #1a6f0e;
 }
 
 .anime {
