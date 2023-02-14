@@ -12,6 +12,7 @@ function App() {
 
   const roomInputRef = useRef(null);
 /*
+AUTH FAILED IN FIREFOX AND CHROME SO I´VE MOVED IT AWAY !!!
   if (!isAuth) {
     return (
       <div className="App">
