@@ -95,7 +95,7 @@ useEffect(() => {
         </form>
       </div>
     </section>
-  );
+  ); 
 };
  
 export default Chat;
