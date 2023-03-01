@@ -97,5 +97,5 @@ useEffect(() => {
     </section>
   );
 };
-
+ 
 export default Chat;
