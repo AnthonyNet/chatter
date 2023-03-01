@@ -14,29 +14,43 @@ function App() {
         {room ? (
           <Chat room={room} />
         ) : (
-          <div className="room w-screen h-screen sm:h-screen flex flex-col sm:flex-row justify-center  items-center gap-4">
-            {" "}
+          <div className="room w-screen h-screen sm:h-screen flex flex-col justify-center  items-center gap-4">
+           
+            <h2>Choose room</h2>
             <div>
-              <input type="radio" id="html" name="fav_language" value="HTML" /> {" "}
-              <label for="html">HTML</label>
-              <br />
-                <input type="radio" id="css" name="fav_language" value="CSS" /> {" "}
-              <label for="css">CSS</label>
-              <br />
-               {" "}
               <input
                 type="radio"
-                id="javascript"
+                id="1"
                 name="fav_language"
-                value="JavaScript" 
+                value="Casual"
+                ref={roomInputRef}
               />
-                <label for="javascript">JavaScript</label>
+               <label htmlFor="casual"> Casual Chat</label>
+              <br />
+             
+              <input
+                type="radio"
+                id="2"
+                name="fav_language"
+                value="Javascript"
+                ref={roomInputRef}
+              />
+               <label htmlFor="javascript"> JavaScript</label>
+              <br />
+              <input
+                type="radio"
+                id="3"
+                name="fav_language"
+                value="React"
+                ref={roomInputRef}
+              />
+              <label htmlFor="react"> React</label>
             </div>
             <button
               onClick={() => setRoom(roomInputRef.current.value)}
               className="px-4 hover:opacity-0 ease-in-out duration-700 bg-red-700 animate-pulse"
             >
-              --Vstup--
+              -- Enter --
             </button>
           </div>
         )}{" "}
