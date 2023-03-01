@@ -10,7 +10,7 @@ function App() {
 
   return (
     <section className="mainSection flex justify-around items-center">
-      <div className="flex justify-between items-center h-screen w-screen sm:w-[800px] sm:h-[430px]  powerShell text-2xl">
+      <div className="flex justify-between items-center h-[50vh] w-screen sm:w-[800px] sm:h-[430px] powerShell text-2xl">
         {room ? (
           <Chat room={room} />
         ) : (

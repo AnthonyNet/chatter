@@ -36,15 +36,22 @@ code {
   background-image: url("components/console.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100%;
+  background-size: 100% 100%;
 
 }
+
+@media screen and(max-width: 444px){
+
+  
+
+}
+
 
 .chat-app{
   display: flex;
   flex-direction: column;
   height: 100vh;
-  color:  #1a6f0e;
+  color: rgb(77 167 65);
 }
 
 .anime {

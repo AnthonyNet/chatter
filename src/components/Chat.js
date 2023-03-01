@@ -16,9 +16,16 @@ export const Chat = ({ room }) => {
   const messagesRef = collection(db, "messages");
   const [userX, setUserX] = useState(null);
 
-  useEffect(() => {
-    setUserX(prompt("Zadej jméno:"));
+
+useEffect(() => {
+  setUserX(prompt("Zadej jméno:"));
+
   }, []);
+
+  useEffect(() => {
+    userX===""||userX===" "&&setUserX("Anonym");
+  })
+
 
   useEffect(() => {
     const queryMessages = query(
@@ -55,10 +62,11 @@ export const Chat = ({ room }) => {
   return (
     <section className="chat-app w-[100vw] h-screen flex items-center justify-center sm:p-8  mainSection">
       <div className="h-full w-full flex flex-col justify-between items-center sm:border-4 m-auto">
-        <div className="header">
+        <div className="header flex justify-around w-full">
           <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
+          <h2>Tvoje jméno: {userX}</h2>
         </div>
-        <div className="messages h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-slate-400 bg-black">
+        <div className="messages h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-white bg-black">
           {messages
             .slice(0)
             .reverse()
@@ -68,6 +76,8 @@ export const Chat = ({ room }) => {
               </div>
             ))}
         </div>
+
+ 
         <form
           onSubmit={handleSubmit}
           className="new-message-form flex justify-center"
