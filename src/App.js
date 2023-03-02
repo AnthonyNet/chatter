@@ -5,12 +5,12 @@ import Chat from "./components/Chat.js";
 
 function App() {
   const [room, setRoom] = useState(null);
+  const [selectRoom, setSelectRoom] = useState(null);
 
+// use it for Input room change
   const roomInputRef = useRef(null);
 
- useEffect(() => {
-  console.log(room);
-  }, [room]);
+
 
   return (
     <section className="mainSection flex justify-around items-center">
@@ -27,7 +27,7 @@ function App() {
                 id="1"
                 name="fav_language"
                 value="Casual"
-               onClick={()=>{setRoom("Casual")}}
+                onClick={()=>{setSelectRoom("Casual")}}
               />
                <label htmlFor="casual"> Casual Chat</label>
               <br />
@@ -37,7 +37,8 @@ function App() {
                 id="2"
                 name="fav_language"
                 value="Javascript"
-                onClick={()=>{setRoom("JavaScript")}}
+                onClick={()=>setSelectRoom("JavaScript")}
+             //   onClick={()=>{setRoom("JavaScript")}}
               />
                <label htmlFor="javascript"> JavaScript</label>
               <br />
@@ -46,12 +47,14 @@ function App() {
                 id="3"
                 name="fav_language"
                 value="React"
-                onClick={()=>{setRoom("React")}}
+                onClick={()=>setSelectRoom("React")}
+               // onClick={()=>{setRoom("React")}}
               />
               <label htmlFor="react"> React</label>
             </div>
             <button
-              onClick={() => setRoom(roomInputRef.current.value)}
+             // onClick={() => setRoom(roomInputRef.current.value)}
+             onClick={() => setRoom(selectRoom)}
               className="px-4 hover:opacity-0 ease-in-out duration-700 bg-red-700 animate-pulse"
             >
               -- Enter --
