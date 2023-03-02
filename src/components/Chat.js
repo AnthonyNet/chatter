@@ -40,7 +40,7 @@ useEffect(() => {
       orderBy("createdAt")
     );
     const unsuscribe = onSnapshot(queryMessages, (snapshot) => {
-      console.log(snapshot)
+     // console.log(snapshot)
       let messages = [];
       snapshot.forEach((doc) => {
        
