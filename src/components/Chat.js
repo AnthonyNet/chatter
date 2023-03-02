@@ -40,11 +40,13 @@ useEffect(() => {
       orderBy("createdAt")
     );
     const unsuscribe = onSnapshot(queryMessages, (snapshot) => {
+      console.log(snapshot)
       let messages = [];
       snapshot.forEach((doc) => {
+       
         messages.push({ ...doc.data(), id: doc.id });
       });
-      //console.log(messages);
+     // console.log(messages);
       setMessages(messages);
     });
 
@@ -77,8 +79,10 @@ useEffect(() => {
             .slice(0)
             .reverse()
             .map((message) => (
+              
               <div key={message.id} className="message">
                 <span className="user">{message.user}:</span> {message.text}
+                <span>{message.dateX}</span>
               </div>
             ))}
         </div>
