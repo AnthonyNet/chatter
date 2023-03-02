@@ -19,12 +19,13 @@ export const Chat = ({ room }) => {
 
 useEffect(() => {
   setUserX(prompt("Zadej jméno:"));
-
+  console.log(userX)
+userX===""||userX===" "||userX===null  && setUserX("Anonym");
   }, []);
-
+/*
   useEffect(() => {
-    userX===""||userX===" "&&setUserX("Anonym");
-  }); 
+    userX===""||userX===" " && setUserX("Anonym");
+  }, [userX]); */
 
 
   useEffect(() => {
