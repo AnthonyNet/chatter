@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./App.css";
 
 import Chat from "./components/Chat.js";
@@ -7,6 +7,10 @@ function App() {
   const [room, setRoom] = useState(null);
 
   const roomInputRef = useRef(null);
+
+ useEffect(() => {
+  console.log(room);
+  }, [room]);
 
   return (
     <section className="mainSection flex justify-around items-center">
@@ -23,7 +27,7 @@ function App() {
                 id="1"
                 name="fav_language"
                 value="Casual"
-                ref={roomInputRef}
+               onClick={()=>{setRoom("Casual")}}
               />
                <label htmlFor="casual"> Casual Chat</label>
               <br />
@@ -33,7 +37,7 @@ function App() {
                 id="2"
                 name="fav_language"
                 value="Javascript"
-                ref={roomInputRef}
+                onClick={()=>{setRoom("JavaScript")}}
               />
                <label htmlFor="javascript"> JavaScript</label>
               <br />
@@ -42,7 +46,7 @@ function App() {
                 id="3"
                 name="fav_language"
                 value="React"
-                ref={roomInputRef}
+                onClick={()=>{setRoom("React")}}
               />
               <label htmlFor="react"> React</label>
             </div>
