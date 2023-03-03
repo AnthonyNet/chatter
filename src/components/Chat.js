@@ -10,6 +10,10 @@ import {
   orderBy,
 } from "firebase/firestore";
 
+const styles = {
+  section: "chat-app w-[100vw] h-screen flex items-center justify-center sm:p-8  mainSection",
+}
+
 export const Chat = ({ room }) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
@@ -68,7 +72,7 @@ useEffect(() => {
   };
 
   return (
-    <section className="chat-app w-[100vw] h-screen flex items-center justify-center sm:p-8  mainSection">
+    <section className={styles.section}>
       <div className="h-full w-full flex flex-col justify-between items-center sm:border-4 m-auto">
         <div className="header flex justify-around w-full">
           <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
