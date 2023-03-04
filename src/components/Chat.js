@@ -16,6 +16,10 @@ const styles = {
   section__div__header: "w-full flex justify-between items-center",
   section__div__header__h2: "text-3xl",
   section__div__article: "h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-white bg-black",
+  section__div__form: "w-full flex justify-center items-center",
+  section__div__form__input: "w-[60%] sm:w-[80%] mr-2 sm:mr-8",
+  section__div__form__button: "anime border-2",
+  
   
 }
 
