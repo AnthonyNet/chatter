@@ -12,6 +12,8 @@ import {
 
 const styles = {
   section: "chat-app w-[100vw] h-screen flex items-center justify-center sm:p-8  mainSection",
+  section__div: "h-full w-full flex flex-col justify-between items-center sm:border-4 m-auto",
+
 }
 
 export const Chat = ({ room }) => {
@@ -73,12 +75,12 @@ useEffect(() => {
 
   return (
     <section className={styles.section}>
-      <div className="h-full w-full flex flex-col justify-between items-center sm:border-4 m-auto">
-        <div className="header flex justify-around w-full">
+      <div className={styles.section__div}>
+        <header className="header flex justify-around w-full">
           <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
           <h2>Tvoje jméno: {userX}</h2>
-        </div>
-        <div className="messages h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-white bg-black">
+        </header>
+        <article className="messages h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-white bg-black">
           {messages
             .slice(0)
             .reverse()
@@ -89,7 +91,7 @@ useEffect(() => {
                 <span>{message.dateX}</span>
               </div>
             ))}
-        </div>
+        </article>
 
  
         <form
