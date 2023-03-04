@@ -13,6 +13,9 @@ import {
 const styles = {
   section: "chat-app w-[100vw] h-screen flex items-center justify-center sm:p-8  mainSection",
   section__div: "h-full w-full flex flex-col justify-between items-center sm:border-4 m-auto",
+  section__div__header: "w-full flex justify-between items-center",
+  section__div__header__h2: "text-3xl",
+  section__div__article: "h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-white bg-black",
 
 }
 
