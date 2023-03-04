@@ -80,7 +80,7 @@ useEffect(() => {
     <section className={styles.section}>
       <div className={styles.section__div}>
         <header className={styles.section__div__header}>
-          <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
+          <h2 className={styles.section__div__header__h2}>Vítej v: {room.toUpperCase()}</h2>
           <h2>Tvoje jméno: {userX}</h2>
         </header>
         <article className="messages h-[85vh] w-full overflow-auto flex flex-col p-2 text-xl border-4 border-white bg-black">
