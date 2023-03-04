@@ -79,7 +79,7 @@ useEffect(() => {
   return (
     <section className={styles.section}>
       <div className={styles.section__div}>
-        <header className="header flex justify-around w-full">
+        <header className={styles.section__div__header}>
           <h2 className="text-3xl">Vítej v: {room.toUpperCase()}</h2>
           <h2>Tvoje jméno: {userX}</h2>
         </header>
