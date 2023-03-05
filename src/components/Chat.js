@@ -109,7 +109,7 @@ useEffect(() => {
             type="text"
             value={newMessage}
             onChange={(event) => setNewMessage(event.target.value)}
-            className="new-message-input max-w-[60%] sm:max-w[80%] mr-2 sm:mr-8"
+            className={styles.section__div__form__input}
             placeholder="Napiš zprávu..."
           />
           <button type="submit" className="send-button anime border-2">
