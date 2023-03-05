@@ -19,7 +19,7 @@ const styles = {
   section__div__form: "w-full flex justify-center items-center",
   section__div__form__input: "w-[60%] sm:w-[80%] mr-2 sm:mr-8",
   section__div__form__button: "anime border-2",
-  
+
   
 }
 
@@ -103,7 +103,7 @@ useEffect(() => {
  
         <form
           onSubmit={handleSubmit}
-          className="new-message-form flex justify-center"
+          className={styles.section__div__form}
         >
           <input
             type="text"
