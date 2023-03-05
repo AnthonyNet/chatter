@@ -112,7 +112,7 @@ useEffect(() => {
             className={styles.section__div__form__input}
             placeholder="Napiš zprávu..."
           />
-          <button type="submit" className="send-button anime border-2">
+          <button type="submit" className={styles.section__div__form__button}>
             Send
           </button>
         </form>
